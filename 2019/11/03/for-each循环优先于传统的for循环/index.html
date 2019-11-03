@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://emt-lin.github.io">
   <title>for-each循环优先于传统的for循环 | lin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="for-each循环&amp;emsp;for-each循环（官方称为成为增强的for语句），完全的隐藏迭代器或者索引变量，避免出错的可能。 123for(Element e : elements) &amp;#123;	...//Do something with e&amp;#125;  &amp;emsp;这个冒号（:）可以把读作“在……里面”，利用for-each循环不会有性能损失。 针对于传统的for循环可能会换这样的">
+  <meta name="description" content="for-each循环&amp;emsp;for-each循环（官方称为成为增强的for语句），完全的隐藏迭代器或者索引变量，避免出错的可能。 123for(Element e : elements) &amp;#123;	...//Do something with e&amp;#125;">
 <meta name="keywords" content="Effective java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="for-each循环优先于传统的for循环">
 <meta property="og:url" content="https://emt-lin.github.io/2019/11/03/for-each循环优先于传统的for循环/index.html">
 <meta property="og:site_name" content="lin的博客">
-<meta property="og:description" content="for-each循环&amp;emsp;for-each循环（官方称为成为增强的for语句），完全的隐藏迭代器或者索引变量，避免出错的可能。 123for(Element e : elements) &amp;#123;	...//Do something with e&amp;#125;  &amp;emsp;这个冒号（:）可以把读作“在……里面”，利用for-each循环不会有性能损失。 针对于传统的for循环可能会换这样的">
+<meta property="og:description" content="for-each循环&amp;emsp;for-each循环（官方称为成为增强的for语句），完全的隐藏迭代器或者索引变量，避免出错的可能。 123for(Element e : elements) &amp;#123;	...//Do something with e&amp;#125;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-03T09:07:18.003Z">
+<meta property="og:updated_time" content="2019-11-03T16:01:23.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="for-each循环优先于传统的for循环">
-<meta name="twitter:description" content="for-each循环&amp;emsp;for-each循环（官方称为成为增强的for语句），完全的隐藏迭代器或者索引变量，避免出错的可能。 123for(Element e : elements) &amp;#123;	...//Do something with e&amp;#125;  &amp;emsp;这个冒号（:）可以把读作“在……里面”，利用for-each循环不会有性能损失。 针对于传统的for循环可能会换这样的">
+<meta name="twitter:description" content="for-each循环&amp;emsp;for-each循环（官方称为成为增强的for语句），完全的隐藏迭代器或者索引变量，避免出错的可能。 123for(Element e : elements) &amp;#123;	...//Do something with e&amp;#125;">
   
     <link rel="alternative" href="/atom.xml" title="lin的博客" type="application/atom+xml">
   
@@ -183,6 +183,8 @@
       
         <h5 id="for-each循环"><a href="#for-each循环" class="headerlink" title="for-each循环"></a>for-each循环</h5><p>&emsp;for-each循环（官方称为成为增强的for语句），完全的隐藏迭代器或者索引变量，避免出错的可能。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(Element e : elements) &#123;</span><br><span class="line">	...<span class="comment">//Do something with e</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <p>&emsp;这个冒号（:）可以把读作“在……里面”，利用for-each循环不会有性能损失。</p>
 <h6 id="针对于传统的for循环可能会换这样的错误"><a href="#针对于传统的for循环可能会换这样的错误" class="headerlink" title="针对于传统的for循环可能会换这样的错误"></a>针对于传统的for循环可能会换这样的错误</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Face &#123;ONE,TWO,THREE,FOUR,FIVE,SIX&#125;</span><br><span class="line">...</span><br><span class="line">Collection&lt;Face&gt; faces = EnumSet.allof(face.class);</span><br><span class="line"><span class="keyword">for</span>(Iterator&lt;FAce&gt; i = faces.iterator(); i.hasNext();)</span><br><span class="line">    <span class="keyword">for</span>(Iterator&lt;Face&gt; j = faces.iterator(); j.hasNext(); )</span><br><span class="line">        System.out.println(i.next() + <span class="string">" "</span> + j.next());</span><br></pre></td></tr></table></figure>
@@ -427,6 +429,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">plan</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Effective java</a>
               </li>
              
@@ -436,10 +442,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">评论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">plan</a>
               </li>
             
             <div class="clearfix"></div>

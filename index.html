@@ -180,16 +180,7 @@
       
         <h5 id="for-each循环"><a href="#for-each循环" class="headerlink" title="for-each循环"></a>for-each循环</h5><p>&emsp;for-each循环（官方称为成为增强的for语句），完全的隐藏迭代器或者索引变量，避免出错的可能。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(Element e : elements) &#123;</span><br><span class="line">	...<span class="comment">//Do something with e</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;这个冒号（:）可以把读作“在……里面”，利用for-each循环不会有性能损失。</p>
-<h6 id="针对于传统的for循环可能会换这样的错误"><a href="#针对于传统的for循环可能会换这样的错误" class="headerlink" title="针对于传统的for循环可能会换这样的错误"></a>针对于传统的for循环可能会换这样的错误</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Face &#123;ONE,TWO,THREE,FOUR,FIVE,SIX&#125;</span><br><span class="line">...</span><br><span class="line">Collection&lt;Face&gt; faces = EnumSet.allof(face.class);</span><br><span class="line"><span class="keyword">for</span>(Iterator&lt;FAce&gt; i = faces.iterator(); i.hasNext();)</span><br><span class="line">    <span class="keyword">for</span>(Iterator&lt;Face&gt; j = faces.iterator(); j.hasNext(); )</span><br><span class="line">        System.out.println(i.next() + <span class="string">" "</span> + j.next());</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;这个程序只能打印6个重复的词（从 “ONE ONE ”到 “SIX SIX”），而不是预计的那36中组合</p>
-<h6 id="三种无法使用for-each循环"><a href="#三种无法使用for-each循环" class="headerlink" title="三种无法使用for-each循环"></a>三种无法使用for-each循环</h6><p>&emsp;1、解构过滤——如果需要遍历集合，并删除选定元素，就需要显示的迭代器</p>
-<p>&emsp;2、转换——如果遍历列表和数组，并取代它的部分值或全部。</p>
-<p>&emsp;3、平行迭代——并行遍历多个集合，就需要显示控制迭代器或索引变化</p>
-<p>总而言之，for-each循环在简洁性、灵活性、出错预防行方面都占有绝对优势，并且没有性能的惩罚，因此，有选择时，建议使用for-each循环</p>
-
+        
       
 
       
@@ -566,6 +557,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">plan</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Effective java</a>
               </li>
              
@@ -575,10 +570,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">评论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">plan</a>
               </li>
             
             <div class="clearfix"></div>
